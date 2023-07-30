@@ -44,7 +44,7 @@ const HeroButton = styled.button`
 const HeroImage = styled.img`
 `;
 
-const HeroBanner: React.FC = () => {
+const HeroBanner = () => {
   return (
     <HeroWrapper>
       <HeroContent>

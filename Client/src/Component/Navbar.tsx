@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import brandLogo from "../Picture/brandLogo.png";
+import { useNavigate } from "react-router-dom";
 
 const NavWrapper = styled.nav`
   background: transparent;
@@ -63,6 +64,7 @@ const Logo = styled.img`
 `;
 
 const Navbar = () => {
+  const navigate = useNavigate();
   return (
     <NavWrapper>
       <NavBrand href="/">
@@ -86,7 +88,7 @@ const Navbar = () => {
           <NavLink href="#">Support</NavLink>
         </NavItem>
       </NavItems>
-      <NavButton>Sign In</NavButton>
+      <NavButton onClick={()=>{navigate('/signIn')}}>Sign In</NavButton>
     </NavWrapper>
   );
 };
